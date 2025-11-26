@@ -3,7 +3,7 @@ export default [
   {
     method: 'GET',
     path: '/courses',
-    handler: 'course.find',
+    handler: 'lms-course.find',
     config: {
       policies: [],
     },
@@ -11,7 +11,7 @@ export default [
   {
     method: 'GET',
     path: '/courses/:id',
-    handler: 'course.findOne',
+    handler: 'lms-course.findOne',
     config: {
       policies: [],
     },
@@ -19,7 +19,7 @@ export default [
   {
     method: 'POST',
     path: '/courses',
-    handler: 'course.create',
+    handler: 'lms-course.create',
     config: {
       policies: [],
     },
@@ -27,7 +27,7 @@ export default [
   {
     method: 'PUT',
     path: '/courses/:id',
-    handler: 'course.update',
+    handler: 'lms-course.update',
     config: {
       policies: [],
     },
@@ -35,7 +35,7 @@ export default [
   {
     method: 'DELETE',
     path: '/courses/:id',
-    handler: 'course.delete',
+    handler: 'lms-course.delete',
     config: {
       policies: [],
     },
@@ -44,7 +44,7 @@ export default [
   {
     method: 'GET',
     path: '/lessons',
-    handler: 'lesson.find',
+    handler: 'lms-lesson.find',
     config: {
       policies: [],
     },
@@ -52,7 +52,7 @@ export default [
   {
     method: 'GET',
     path: '/lessons/:id',
-    handler: 'lesson.findOne',
+    handler: 'lms-lesson.findOne',
     config: {
       policies: [],
     },
@@ -60,7 +60,7 @@ export default [
   {
     method: 'POST',
     path: '/lessons',
-    handler: 'lesson.create',
+    handler: 'lms-lesson.create',
     config: {
       policies: [],
     },
@@ -68,7 +68,7 @@ export default [
   {
     method: 'PUT',
     path: '/lessons/:id',
-    handler: 'lesson.update',
+    handler: 'lms-lesson.update',
     config: {
       policies: [],
     },
@@ -76,7 +76,7 @@ export default [
   {
     method: 'DELETE',
     path: '/lessons/:id',
-    handler: 'lesson.delete',
+    handler: 'lms-lesson.delete',
     config: {
       policies: [],
     },
@@ -85,7 +85,7 @@ export default [
   {
     method: 'GET',
     path: '/comments',
-    handler: 'comment.find',
+    handler: 'lms-comment.find',
     config: {
       policies: [],
     },
@@ -93,7 +93,7 @@ export default [
   {
     method: 'GET',
     path: '/comments/:id',
-    handler: 'comment.findOne',
+    handler: 'lms-comment.findOne',
     config: {
       policies: [],
     },
@@ -101,7 +101,7 @@ export default [
   {
     method: 'POST',
     path: '/comments',
-    handler: 'comment.create',
+    handler: 'lms-comment.create',
     config: {
       policies: [],
     },
@@ -109,7 +109,7 @@ export default [
   {
     method: 'PUT',
     path: '/comments/:id',
-    handler: 'comment.update',
+    handler: 'lms-comment.update',
     config: {
       policies: [],
     },
@@ -117,7 +117,7 @@ export default [
   {
     method: 'DELETE',
     path: '/comments/:id',
-    handler: 'comment.delete',
+    handler: 'lms-comment.delete',
     config: {
       policies: [],
     },

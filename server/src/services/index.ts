@@ -5,7 +5,7 @@ import comment from './comment';
 
 export default {
   service,
-  course,
-  lesson,
-  comment,
+  'lms-course': course,
+  'lms-lesson': lesson,
+  'lms-comment': comment,
 };
