@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lms_lessons",
+  "info": {
+    "singularName": "lms-lesson",
+    "pluralName": "lms-lessons",
+    "displayName": "LMS Lesson",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "videoTimecode": {
+      "type": "integer"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::strapi-plugin-lms.lms-course",
+      "inversedBy": "lessons"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "resources": {
+      "type": "richtext"
+    }
+  }
+}

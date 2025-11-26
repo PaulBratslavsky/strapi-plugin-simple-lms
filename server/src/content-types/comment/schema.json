@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lms_comments",
+  "info": {
+    "singularName": "lms-comment",
+    "pluralName": "lms-comments",
+    "displayName": "LMS Comment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "contentId": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["question", "answer", "comment"],
+      "default": "comment",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

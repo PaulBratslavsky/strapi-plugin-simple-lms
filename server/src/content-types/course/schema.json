@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lms_courses",
+  "info": {
+    "singularName": "lms-course",
+    "pluralName": "lms-courses",
+    "displayName": "LMS Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "isPremium": {
+      "type": "boolean",
+      "default": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::strapi-plugin-lms.lms-lesson",
+      "mappedBy": "course"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
